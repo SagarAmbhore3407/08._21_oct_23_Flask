@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask WebSocket Notifications</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script type="text/javascript">
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        socket.on('message', function(msg) {
+            displayNotification(msg);
+        });
+
+        function displayNotification(message) {
+            var notificationContainer = document.getElementById('notifications');
+            var notificationElement = document.createElement('div');
+            notificationElement.className = 'notification';
+            notificationElement.innerHTML = message;
+            notificationContainer.appendChild(notificationElement);
+        }
+    </script>
+    <style>
+        .notification {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flask WebSocket Notifications</h1>
+    <div id="notifications"></div>
+</body>
+</html>
+

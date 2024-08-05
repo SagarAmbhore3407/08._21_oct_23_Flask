@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background:hsla(202, 82%, 79%, 0.827);
+        }
+        h1,h2{
+            color: #2e3703;
+            text-align:center
+        }
+        h4{
+            text-align: center;
+            color:#544703
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <a href="{{url_for('index')}}">Home</a> |
+        <a href="{{url_for('contactus')}}">Contact-Us</a> |
+        <a href="{{url_for('feedback')}}">Feedback</a>
+
+    </p>
+    <h4>::About Us-Page::</h4>
+    <hr class="styled-hr">
+    <br>
+    <h1>What we do..?</h1>
+    <h2>We are Software developement & Data Scientiest Professionals...</h2>
+</body>
+</html>

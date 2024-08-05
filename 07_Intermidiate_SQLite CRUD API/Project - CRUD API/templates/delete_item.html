@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #adfbff;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 40px;
+            font-size: 32px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .container ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .container ul li:last-child {
+            margin-right: 0;
+        }
+        a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #f0f0f0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            width: calc(100% - 22px);
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h3>Select an Operation</h3>
+    <div class="container">
+        <ul>
+            <li><a href="{{url_for('add_page')}}">Add Item to Database</a></li>
+            <li><a href="{{url_for('update_page')}}">Update an Item</a></li>
+            <li><a href="{{url_for('fetch_page')}}">Fetch an item from Database</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Delete an Item from Database</h1>
+        <p>Delete a single item by its ID</p>
+        <form action='/deleteone' method = 'post'>
+            <label for="item_id">Item ID</label>
+            <input type="number" id="item_id" name="item_id">
+            <input type="submit" value="Delete Item">
+        </form>
+        <p>Delete multiple items by price</p>
+        <form action='/deletemultiple' method = 'post'>
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price">
+            <input type="submit" value="Delete Items">
+        </form>
+        <p>Delete All items from the table</p>
+        <form action='/formattable' method = 'post'>
+            <label for="price">DELETE ALL</label>
+            <input type="submit" value="Delete All Items">
+        </form>
+    </div>
+</body>
+</html>

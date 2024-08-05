@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      max-width: 90%;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+      font-size: 2em; /* Increased font size */
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      color: #666;
+      font-size: 1.1em; /* Increased font size */
+      font-weight: bold; /* Added font weight */
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"] {
+      width: calc(100% - 22px);
+      padding: 12px;
+      margin: 8px 0 20px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 1.2em; /* Increased font size */
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #2a682d;
+    }
+    p {
+      margin-top: 20px;
+      color: #777;
+      font-size: 1em; /* Increased font size */
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: bold; /* Added font weight */
+    }
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <form action="/signup" method="post">
+    <h2>Signup</h2>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password1">Password</label>
+    <input type="password" id="password1" name="password1" required>
+    <label for="password2">Confirm Password</label>
+    <input type="password" id="password2" name="password2" required>
+    <input type="submit" value="Signup">
+    <p>Already have an account? <a href="/login">Login</a></p>
+  </form>
+</body>
+</html>

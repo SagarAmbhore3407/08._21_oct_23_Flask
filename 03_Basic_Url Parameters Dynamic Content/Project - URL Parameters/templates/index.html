@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin : 20px;
+            background-color: cornsilk;
+        }
+        h1{
+            color: black;
+            text-align: center;
+            text-decoration: underline;
+        }
+        form{
+            align-self: center;
+            align-content: center;
+            color-scheme: rgb(3, 70, 3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Voting Info Form</h1>
+    <hr>
+    <form action="/isEligible" method="post">
+        <table>
+            <tr>
+                <td>
+                    Name : 
+                </td>
+                <td>
+                    <input type="text" id="name" name="name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Age : 
+                </td>
+                <td>
+                    <input type="number" id="age" name="age" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email : 
+                </td>
+                <td>
+                    <input type="email" id="email" name="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+     
+                </td>
+                <td>
+                    <input type="submit" value="Confirm Details">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

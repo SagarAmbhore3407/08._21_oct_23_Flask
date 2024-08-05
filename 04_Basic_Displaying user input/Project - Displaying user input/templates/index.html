@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Page</title>
+    <style>
+        body {
+            margin: 20px;
+            background-color: rgb(172, 206, 239);
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: rgb(3, 70, 3);
+        }
+
+        input[type="text"],
+        input[type="submit"] {
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(3, 70, 3);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Input Page</h1>
+    <form action="/displayinput" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="user_input">User Input</label>
+        <input type="text" id="user_input" name="user_input" placeholder="Any Input" required>
+
+        <input type="submit" value="Submit Input">
+    </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to My App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1a73e8;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Authentication App</h1>
+        <p>This is a simple Flask-Login application.</p>
+        
+        <p>
+            <a href="{{ url_for('login') }}">Login</a> or
+            <a href="{{ url_for('signup') }}">Sign Up</a>
+        </p>
+
+        <!-- Other content or sections can be added as needed -->
+    </div>
+
+    <!-- Add any necessary JavaScript scripts or links to external scripts -->
+</body>
+</html>

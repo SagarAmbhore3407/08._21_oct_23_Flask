@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c9d4ff;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 40px;
+            font-size: 32px;
+        }
+        p {
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .container ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .container ul li {
+            margin-right: 10px;
+        }
+        .container ul li:last-child {
+            margin-right: 0;
+        }
+        a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #f0f0f0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h3>You can select other Operations</h3>
+    <div class="container">
+        <ul>
+            <li><a href="{{url_for('fetch_page')}}">Fetch an item from Database</a></li>
+            <li><a href="{{url_for('update_page')}}">Update an Item</a></li>
+            <li><a href="{{url_for('delete_page')}}">Delete an Item</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Add an Item to Database</h1>
+        <p>Enter the Item and price and click on add button</p>
+        <form action="/createitem" method = 'post'>
+            <label for="item_name">Item name</label>
+            <input type="text" id="item_name" name="item_name">
+            <label for="item_price">Item Price</label>
+            <input type="number" id="item_price" name="item_price" step="0.01">
+            <input type="submit" value="Add Item">
+        </form>
+    </div>    
+</body>
+</html>

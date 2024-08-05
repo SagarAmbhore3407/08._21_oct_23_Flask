@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification page</title>
+    <style>
+        /* CSS styles embedded within the HTML file */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #aaa9f3;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0066cc;
+            text-align: center;
+        }
+
+        .message-container {
+            border: 1px solid #999999;
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        h4,p {
+            line-height: 1.6;
+        }
+
+        /* Styling for links */
+        a {
+            color: #009933;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notification Page</h1>
+    <div class="message-container">
+        <h4>{{message1}}</h4>
+        <h3>{{message2}}</h3>
+        <p>Back to <a href="{{url_for('index')}}">Login page</a> OR <a href="{{url_for('signup_page')}}">Signup page</a></p>
+    </div>
+</body>
+</html>

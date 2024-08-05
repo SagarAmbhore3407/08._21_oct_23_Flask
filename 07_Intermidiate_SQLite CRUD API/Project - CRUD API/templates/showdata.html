@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8c197;
+            margin: 20px;
+        }
+
+        /* Styling for message container */
+        .message-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            color: #555;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Styling for record list container */
+        .record-list {
+            background-color: #eaeaea;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            color: #777;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Message container -->
+    <div class="message-container">
+        <h3>{{message1}}</h3>
+        <h4>{{message2}}</h4>
+    </div>
+
+    <!-- Record list container -->
+    <div class="record-list">
+        <h2>Items Record from Database</h2>
+        {% for item in record %}
+        <h5>{{ item }}</h5>
+        {% endfor %}
+    </div>
+</body>
+</html>
